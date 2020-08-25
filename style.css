@@ -1,0 +1,12 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+header{
+	background-color: #555555;
+	color: #4CAF50;
+	text-align: center;
+	padding: 20px;
+}

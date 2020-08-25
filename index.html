@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <header>
+	  <h1>Rock Paper Scissors</h1>
+  </header>
+
+  <body>
+		<div class="scoreboard">
+			<div id="user-label" class="badges">User</div>
+			<div id="comp-label" class="badges">Computer</div>
+			<span id="userScore">0</span>:<span id="compScore">0</span>
+		</div>
+
+		<div class="result">
+			<p>Paper covers Rock. You win!</p>
+		</div>
+		
+		<div class="choices">
+			
+			<div class="choice" id="rock">
+				<img src="images/Rock.png" alt="Rock">
+			</div>
+
+			<div class="choice" id="Paper">
+				<img src="images/Paper.png" alt="Paper">
+			</div>
+
+			<div class="choice" id="Scissors">
+				<img src="images/Scissors.png" alt="Scissors">
+			</div>
+
+		</div>
+		
+		<p id="action-message">Make your move</p>
+
+		<script src="script.js"></script>
+  </body>
+</html>
