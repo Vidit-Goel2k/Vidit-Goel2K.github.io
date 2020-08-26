@@ -1,12 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Orbitron:wght@600&display=swap');
 *{
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 }
-
-header{
+body{
 	background-color: #555555;
+	font-family: Asap,sans-serif;
+	color: wheat;
+}
+header{
+	background-color: #252525;
+	padding: 10px;
+}
+
+header>h1{
 	color: #4CAF50;
 	text-align: center;
-	padding: 20px;
+	font-family: orbitron,sans-serif;	
+}
+
+.score-board{
+	margin: 20px auto;
+	border: 5px solid #252525;
+	border-radius: 5px;
+	width: 300px;
+	font-size: 46px;
+	text-align: center;
+	padding: 15px 20px;
+	position: relative;
+}
+
+.badge{
+	background-color:#0F1728;
+	color: white;
+	font-size: 20px;
+	padding: 3px 12px;
+}
+
+#user-label{
+	position: absolute;
+	top:35%;
+	left:-12%;
+	border-radius: 3px;
+}
+
+#computer-label{
+	position: absolute;
+	top:35%;
+	right:-25%;
+	border-radius: 3px;
+}
+
+.result{
+	font-size: 40px;
+}
+
+.result>p{
+	text-align: center;
+	font-weight: bold;
+}
+
+.choices{
+	text-align: center;
+	margin-top: 50px;
+}
+
+.choice{
+	display: inline-block;
+	transition: 0.5s ease;
+}
+
+img{
+	border: 6px solid white;
+	margin: 0 15px;
+	padding: 0px;
+	border-radius: 50%;
+	
+}
+
+.choice:hover{
+	background-color: #262632;
+	cursor: pointer;
+	border: 6px solid white;
+}
+
+#action-message{
+	text-align: center;
+	font-size: 30px;
+	margin-top: 20px;
 }
