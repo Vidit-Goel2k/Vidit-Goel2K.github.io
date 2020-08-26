@@ -19,56 +19,54 @@ function getComputerChoice(){
 }
 
 function win(userChoice, computerChoice){
-	//console.log("win")
+	const smallUserWord = "user".fontsize(3).sub();
+	const smallCompWord = "comp".fontsize(3).sub();
 	userScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
-	const smallUserWord = "user".fontsize(3).sub();
-	const smallCompWord = "comp".fontsize(3).sub();
-	result_p.innerHTML =`${userChoice}${smallUserWord} beats ${computerChoice}${smallCompWord}. YOU WIN !`;
+	result_p.innerHTML =`${userChoice}${smallUserWord} beats ${computerChoice}${smallCompWord}. YOU WIN ! 🔥`;
+	document.getElementById(userChoice).classList.add('green-glow');
+	setTimeout(function(){document.getElementById(userChoice).classList.remove('green-glow')},500);
 }
 
 function lose(userChoice, computerChoice){
-	//console.log("LOST");
 	computerScore++;
 	userScore_span.innerHTML = userScore;
 	computerScore_span.innerHTML = computerScore;
 	const smallUserWord = "user".fontsize(3).sub();
 	const smallCompWord = "comp".fontsize(3).sub();
-	result_p.innerHTML =`${userChoice}${smallUserWord} loses to ${computerChoice}${smallCompWord}. YOU LOST !`;
+	result_p.innerHTML =`${userChoice}${smallUserWord} loses to ${computerChoice}${smallCompWord}. YOU LOST ! 💩`;
+	document.getElementById(userChoice).classList.add('red-glow');
+	setTimeout(function(){document.getElementById(userChoice).classList.remove('red-glow')},500);
 }
 
 function draw(userChoice, computerChoice){
-	//console.log("DRAW");
 	const smallUserWord = "user".fontsize(3).sub();
 	const smallCompWord = "comp".fontsize(3).sub();
-	result_p.innerHTML =`${userChoice}${smallUserWord} equals ${computerChoice}${smallCompWord}. ITS A DRAW `;
+	result_p.innerHTML =`${userChoice}${smallUserWord} equals ${computerChoice}${smallCompWord}. ITS A DRAW .`;
+	document.getElementById(userChoice).classList.add('gray-glow');
+	setTimeout(function(){document.getElementById(userChoice).classList.remove('gray-glow')},500);
 }
 
 
 //Game 
 function game(userChoice){
 	const computerChoice= getComputerChoice();
-	//console.log(userChoice);
-	//console.log(computerChoice);
 	switch(userChoice + computerChoice){
 		case "rockscissors":
 		case "paperrock":
 		case "scissorspaper":
 			win(userChoice, computerChoice);
-			//console.log("USER WINS.");
 			break;
 		case "rockpaper":
 		case "paperscissors":
 		case "scissorsrock":
 			lose(userChoice, computerChoice);
-			//console.log("USER LOSES.");
 			break;
 		case "rockrock":
 		case "paperpaper":
 		case "scissorsscissors":
 			draw(userChoice, computerChoice);
-			//console.log("ITS A DRAW.");
 			break;
 	}
 }
